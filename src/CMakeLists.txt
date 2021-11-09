@@ -47,7 +47,6 @@ if(EXISTS "${CMAKE_CURRENT_BINARY_DIR}/conanbuildinfo.cmake")
   # target_link_libraries(kaikosdk PRIVATE CONAN_PKG::grpc)
   
   target_link_libraries(kaikosdk PRIVATE ${_PROTOBUF_LIBPROTOBUF} ${_GRPC_GRPCPP})
-  target_link_libraries(app PRIVATE kaikosdk ${_GRPC_GRPCPP})
 
   # https://cmake.org/cmake/help/latest/command/target_link_libraries.html
   # Libraries and targets following PUBLIC are linked to, and are made part of the link interface. Libraries and targets following PRIVATE are linked to, but are not made part of the link interface.
