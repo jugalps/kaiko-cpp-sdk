@@ -40,11 +40,11 @@ const char descriptor_table_protodef_sdk_2fsdk_2eproto[] PROTOBUF_SECTION_VARIAB
   "regates_vwap_v1/request.proto\032,sdk/strea"
   "m/aggregates_vwap_v1/response.proto\032;sdk"
   "/stream/aggregates_direct_exchange_rate_"
-  "v1/request.proto\032<sdk/stream/aggregates_"
-  "direct_exchange_rate_v1/response.proto\0329"
+  "v2/request.proto\032<sdk/stream/aggregates_"
+  "direct_exchange_rate_v2/response.proto\0329"
   "sdk/stream/aggregates_spot_exchange_rate"
-  "_v1/request.proto\032:sdk/stream/aggregates"
-  "_spot_exchange_rate_v1/response.proto\032!s"
+  "_v2/request.proto\032:sdk/stream/aggregates"
+  "_spot_exchange_rate_v2/response.proto\032!s"
   "dk/stream/index_v1/request.proto\032\"sdk/st"
   "ream/index_v1/response.proto\032.sdk/stream"
   "/index_multi_assets_v1/request.proto\032/sd"
@@ -82,15 +82,15 @@ const char descriptor_table_protodef_sdk_2fsdk_2eproto[] PROTOBUF_SECTION_VARIAB
   "arketUpdateServiceV1\022^\n\tSubscribe\022%.kaik"
   "osdk.StreamMarketUpdateRequestV1\032&.kaiko"
   "sdk.StreamMarketUpdateResponseV1\"\0000\0012\255\001\n"
-  "+StreamAggregatesSpotExchangeRateV1Servi"
-  "ceV2\022~\n\tSubscribe\0225.kaikosdk.StreamAggre"
-  "gatesSpotExchangeRateV1RequestV2\0326.kaiko"
-  "sdk.StreamAggregatesSpotExchangeRateV1Re"
-  "sponseV2\"\0000\0012\270\001\n1StreamAggregatesSpotDir"
-  "ectExchangeRateV1ServiceV2\022\202\001\n\tSubscribe"
+  "+StreamAggregatesSpotExchangeRateV2Servi"
+  "ceV1\022~\n\tSubscribe\0225.kaikosdk.StreamAggre"
+  "gatesSpotExchangeRateV2RequestV1\0326.kaiko"
+  "sdk.StreamAggregatesSpotExchangeRateV2Re"
+  "sponseV1\"\0000\0012\270\001\n1StreamAggregatesSpotDir"
+  "ectExchangeRateV2ServiceV1\022\202\001\n\tSubscribe"
   "\0227.kaikosdk.StreamAggregatesDirectExchan"
-  "geRateV1RequestV2\0328.kaikosdk.StreamAggre"
-  "gatesDirectExchangeRateV1ResponseV2\"\0000\0012"
+  "geRateV2RequestV1\0328.kaikosdk.StreamAggre"
+  "gatesDirectExchangeRateV2ResponseV1\"\0000\0012"
   "\221\001\n\035StreamIndexForexRateServiceV1\022p\n\tSub"
   "scribe\022..kaikosdk.StreamIndexForexRateSe"
   "rviceRequestV1\032/.kaikosdk.StreamIndexFor"
@@ -103,12 +103,12 @@ static const ::_pbi::DescriptorTable* const descriptor_table_sdk_2fsdk_2eproto_d
   &::descriptor_table_sdk_2fstream_2faggregated_5fprice_5fv1_2fresponse_2eproto,
   &::descriptor_table_sdk_2fstream_2faggregated_5fquote_5fv2_2frequest_2eproto,
   &::descriptor_table_sdk_2fstream_2faggregated_5fquote_5fv2_2fresponse_2eproto,
-  &::descriptor_table_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_5fv1_2frequest_2eproto,
-  &::descriptor_table_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_5fv1_2fresponse_2eproto,
+  &::descriptor_table_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_5fv2_2frequest_2eproto,
+  &::descriptor_table_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_5fv2_2fresponse_2eproto,
   &::descriptor_table_sdk_2fstream_2faggregates_5fohlcv_5fv1_2frequest_2eproto,
   &::descriptor_table_sdk_2fstream_2faggregates_5fohlcv_5fv1_2fresponse_2eproto,
-  &::descriptor_table_sdk_2fstream_2faggregates_5fspot_5fexchange_5frate_5fv1_2frequest_2eproto,
-  &::descriptor_table_sdk_2fstream_2faggregates_5fspot_5fexchange_5frate_5fv1_2fresponse_2eproto,
+  &::descriptor_table_sdk_2fstream_2faggregates_5fspot_5fexchange_5frate_5fv2_2frequest_2eproto,
+  &::descriptor_table_sdk_2fstream_2faggregates_5fspot_5fexchange_5frate_5fv2_2fresponse_2eproto,
   &::descriptor_table_sdk_2fstream_2faggregates_5fvwap_5fv1_2frequest_2eproto,
   &::descriptor_table_sdk_2fstream_2faggregates_5fvwap_5fv1_2fresponse_2eproto,
   &::descriptor_table_sdk_2fstream_2findex_5fforex_5frate_5fv1_2frequest_2eproto,

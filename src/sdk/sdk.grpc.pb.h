@@ -1708,55 +1708,55 @@ class StreamMarketUpdateServiceV1 final {
   typedef WithSplitStreamingMethod_Subscribe<Service > StreamedService;
 };
 
-// Service for streaming Spot exchange rate V1 service V2
-class StreamAggregatesSpotExchangeRateV1ServiceV2 final {
+// Service for streaming Spot exchange rate V2 service V1
+class StreamAggregatesSpotExchangeRateV2ServiceV1 final {
  public:
   static constexpr char const* service_full_name() {
-    return "kaikosdk.StreamAggregatesSpotExchangeRateV1ServiceV2";
+    return "kaikosdk.StreamAggregatesSpotExchangeRateV2ServiceV1";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
     // Subscribe
-    std::unique_ptr< ::grpc::ClientReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>> Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2& request) {
-      return std::unique_ptr< ::grpc::ClientReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>>(SubscribeRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>> Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>>(SubscribeRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>> AsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>>(AsyncSubscribeRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>> AsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>>(AsyncSubscribeRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>> PrepareAsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>>(PrepareAsyncSubscribeRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>> PrepareAsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>>(PrepareAsyncSubscribeRaw(context, request, cq));
     }
     class async_interface {
      public:
       virtual ~async_interface() {}
       // Subscribe
-      virtual void Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* reactor) = 0;
+      virtual void Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2& request) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    std::unique_ptr< ::grpc::ClientReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>> Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2& request) {
-      return std::unique_ptr< ::grpc::ClientReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>>(SubscribeRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>> Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>>(SubscribeRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>> AsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>>(AsyncSubscribeRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>> AsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>>(AsyncSubscribeRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>> PrepareAsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>>(PrepareAsyncSubscribeRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>> PrepareAsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>>(PrepareAsyncSubscribeRaw(context, request, cq));
     }
     class async final :
       public StubInterface::async_interface {
      public:
-      void Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* reactor) override;
+      void Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -1768,9 +1768,9 @@ class StreamAggregatesSpotExchangeRateV1ServiceV2 final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2& request) override;
-    ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1& request) override;
+    ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_Subscribe_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -1780,7 +1780,7 @@ class StreamAggregatesSpotExchangeRateV1ServiceV2 final {
     Service();
     virtual ~Service();
     // Subscribe
-    virtual ::grpc::Status Subscribe(::grpc::ServerContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2* request, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* writer);
+    virtual ::grpc::Status Subscribe(::grpc::ServerContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1* request, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* writer);
   };
   template <class BaseClass>
   class WithAsyncMethod_Subscribe : public BaseClass {
@@ -1794,11 +1794,11 @@ class StreamAggregatesSpotExchangeRateV1ServiceV2 final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* /*writer*/) override {
+    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSubscribe(::grpc::ServerContext* context, ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2* request, ::grpc::ServerAsyncWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestSubscribe(::grpc::ServerContext* context, ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1* request, ::grpc::ServerAsyncWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncServerStreaming(0, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
@@ -1810,20 +1810,20 @@ class StreamAggregatesSpotExchangeRateV1ServiceV2 final {
    public:
     WithCallbackMethod_Subscribe() {
       ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackServerStreamingHandler< ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2, ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>(
+          new ::grpc::internal::CallbackServerStreamingHandler< ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1, ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2* request) { return this->Subscribe(context, request); }));
+                   ::grpc::CallbackServerContext* context, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1* request) { return this->Subscribe(context, request); }));
     }
     ~WithCallbackMethod_Subscribe() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* /*writer*/) override {
+    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerWriteReactor< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* Subscribe(
-      ::grpc::CallbackServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2* /*request*/)  { return nullptr; }
+    virtual ::grpc::ServerWriteReactor< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* Subscribe(
+      ::grpc::CallbackServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1* /*request*/)  { return nullptr; }
   };
   typedef WithCallbackMethod_Subscribe<Service > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
@@ -1839,7 +1839,7 @@ class StreamAggregatesSpotExchangeRateV1ServiceV2 final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* /*writer*/) override {
+    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1856,7 +1856,7 @@ class StreamAggregatesSpotExchangeRateV1ServiceV2 final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* /*writer*/) override {
+    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1879,7 +1879,7 @@ class StreamAggregatesSpotExchangeRateV1ServiceV2 final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* /*writer*/) override {
+    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -1895,10 +1895,10 @@ class StreamAggregatesSpotExchangeRateV1ServiceV2 final {
     WithSplitStreamingMethod_Subscribe() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::SplitServerStreamingHandler<
-          ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2, ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>(
+          ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1, ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerSplitStreamer<
-                     ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2, ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* streamer) {
+                     ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1, ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* streamer) {
                        return this->StreamedSubscribe(context,
                          streamer);
                   }));
@@ -1907,66 +1907,66 @@ class StreamAggregatesSpotExchangeRateV1ServiceV2 final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* /*writer*/) override {
+    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with split streamed
-    virtual ::grpc::Status StreamedSubscribe(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::kaikosdk::StreamAggregatesSpotExchangeRateV1RequestV2,::kaikosdk::StreamAggregatesSpotExchangeRateV1ResponseV2>* server_split_streamer) = 0;
+    virtual ::grpc::Status StreamedSubscribe(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::kaikosdk::StreamAggregatesSpotExchangeRateV2RequestV1,::kaikosdk::StreamAggregatesSpotExchangeRateV2ResponseV1>* server_split_streamer) = 0;
   };
   typedef WithSplitStreamingMethod_Subscribe<Service > SplitStreamedService;
   typedef WithSplitStreamingMethod_Subscribe<Service > StreamedService;
 };
 
-// Service for streaming Direct exchange rate V1 service V2
-class StreamAggregatesSpotDirectExchangeRateV1ServiceV2 final {
+// Service for streaming Direct exchange rate V2 service V1
+class StreamAggregatesSpotDirectExchangeRateV2ServiceV1 final {
  public:
   static constexpr char const* service_full_name() {
-    return "kaikosdk.StreamAggregatesSpotDirectExchangeRateV1ServiceV2";
+    return "kaikosdk.StreamAggregatesSpotDirectExchangeRateV2ServiceV1";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
     // Subscribe
-    std::unique_ptr< ::grpc::ClientReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>> Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2& request) {
-      return std::unique_ptr< ::grpc::ClientReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>>(SubscribeRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>> Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1& request) {
+      return std::unique_ptr< ::grpc::ClientReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>>(SubscribeRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>> AsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>>(AsyncSubscribeRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>> AsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>>(AsyncSubscribeRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>> PrepareAsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>>(PrepareAsyncSubscribeRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>> PrepareAsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>>(PrepareAsyncSubscribeRaw(context, request, cq));
     }
     class async_interface {
      public:
       virtual ~async_interface() {}
       // Subscribe
-      virtual void Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* reactor) = 0;
+      virtual void Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* reactor) = 0;
     };
     typedef class async_interface experimental_async_interface;
     virtual class async_interface* async() { return nullptr; }
     class async_interface* experimental_async() { return async(); }
    private:
-    virtual ::grpc::ClientReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2& request) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
-    virtual ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1& request) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq, void* tag) = 0;
+    virtual ::grpc::ClientAsyncReaderInterface< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
-    std::unique_ptr< ::grpc::ClientReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>> Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2& request) {
-      return std::unique_ptr< ::grpc::ClientReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>>(SubscribeRaw(context, request));
+    std::unique_ptr< ::grpc::ClientReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>> Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1& request) {
+      return std::unique_ptr< ::grpc::ClientReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>>(SubscribeRaw(context, request));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>> AsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq, void* tag) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>>(AsyncSubscribeRaw(context, request, cq, tag));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>> AsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq, void* tag) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>>(AsyncSubscribeRaw(context, request, cq, tag));
     }
-    std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>> PrepareAsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>>(PrepareAsyncSubscribeRaw(context, request, cq));
+    std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>> PrepareAsyncSubscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>>(PrepareAsyncSubscribeRaw(context, request, cq));
     }
     class async final :
       public StubInterface::async_interface {
      public:
-      void Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* reactor) override;
+      void Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* reactor) override;
      private:
       friend class Stub;
       explicit async(Stub* stub): stub_(stub) { }
@@ -1978,9 +1978,9 @@ class StreamAggregatesSpotDirectExchangeRateV1ServiceV2 final {
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
     class async async_stub_{this};
-    ::grpc::ClientReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2& request) override;
-    ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq, void* tag) override;
-    ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1& request) override;
+    ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq, void* tag) override;
+    ::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::internal::RpcMethod rpcmethod_Subscribe_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
@@ -1990,7 +1990,7 @@ class StreamAggregatesSpotDirectExchangeRateV1ServiceV2 final {
     Service();
     virtual ~Service();
     // Subscribe
-    virtual ::grpc::Status Subscribe(::grpc::ServerContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2* request, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* writer);
+    virtual ::grpc::Status Subscribe(::grpc::ServerContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1* request, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* writer);
   };
   template <class BaseClass>
   class WithAsyncMethod_Subscribe : public BaseClass {
@@ -2004,11 +2004,11 @@ class StreamAggregatesSpotDirectExchangeRateV1ServiceV2 final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* /*writer*/) override {
+    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void RequestSubscribe(::grpc::ServerContext* context, ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2* request, ::grpc::ServerAsyncWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void RequestSubscribe(::grpc::ServerContext* context, ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1* request, ::grpc::ServerAsyncWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* writer, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncServerStreaming(0, context, request, writer, new_call_cq, notification_cq, tag);
     }
   };
@@ -2020,20 +2020,20 @@ class StreamAggregatesSpotDirectExchangeRateV1ServiceV2 final {
    public:
     WithCallbackMethod_Subscribe() {
       ::grpc::Service::MarkMethodCallback(0,
-          new ::grpc::internal::CallbackServerStreamingHandler< ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2, ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>(
+          new ::grpc::internal::CallbackServerStreamingHandler< ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1, ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>(
             [this](
-                   ::grpc::CallbackServerContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2* request) { return this->Subscribe(context, request); }));
+                   ::grpc::CallbackServerContext* context, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1* request) { return this->Subscribe(context, request); }));
     }
     ~WithCallbackMethod_Subscribe() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* /*writer*/) override {
+    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    virtual ::grpc::ServerWriteReactor< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* Subscribe(
-      ::grpc::CallbackServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2* /*request*/)  { return nullptr; }
+    virtual ::grpc::ServerWriteReactor< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* Subscribe(
+      ::grpc::CallbackServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1* /*request*/)  { return nullptr; }
   };
   typedef WithCallbackMethod_Subscribe<Service > CallbackService;
   typedef CallbackService ExperimentalCallbackService;
@@ -2049,7 +2049,7 @@ class StreamAggregatesSpotDirectExchangeRateV1ServiceV2 final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* /*writer*/) override {
+    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2066,7 +2066,7 @@ class StreamAggregatesSpotDirectExchangeRateV1ServiceV2 final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* /*writer*/) override {
+    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2089,7 +2089,7 @@ class StreamAggregatesSpotDirectExchangeRateV1ServiceV2 final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* /*writer*/) override {
+    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -2105,10 +2105,10 @@ class StreamAggregatesSpotDirectExchangeRateV1ServiceV2 final {
     WithSplitStreamingMethod_Subscribe() {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::SplitServerStreamingHandler<
-          ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2, ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>(
+          ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1, ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>(
             [this](::grpc::ServerContext* context,
                    ::grpc::ServerSplitStreamer<
-                     ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2, ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* streamer) {
+                     ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1, ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* streamer) {
                        return this->StreamedSubscribe(context,
                          streamer);
                   }));
@@ -2117,12 +2117,12 @@ class StreamAggregatesSpotDirectExchangeRateV1ServiceV2 final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* /*writer*/) override {
+    ::grpc::Status Subscribe(::grpc::ServerContext* /*context*/, const ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1* /*request*/, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* /*writer*/) override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with split streamed
-    virtual ::grpc::Status StreamedSubscribe(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::kaikosdk::StreamAggregatesDirectExchangeRateV1RequestV2,::kaikosdk::StreamAggregatesDirectExchangeRateV1ResponseV2>* server_split_streamer) = 0;
+    virtual ::grpc::Status StreamedSubscribe(::grpc::ServerContext* context, ::grpc::ServerSplitStreamer< ::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1,::kaikosdk::StreamAggregatesDirectExchangeRateV2ResponseV1>* server_split_streamer) = 0;
   };
   typedef WithSplitStreamingMethod_Subscribe<Service > SplitStreamedService;
   typedef WithSplitStreamingMethod_Subscribe<Service > StreamedService;
