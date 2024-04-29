@@ -27,6 +27,7 @@ PROTOBUF_CONSTEXPR StreamAggregatesDirectExchangeRateV2RequestV1::StreamAggregat
   , /*decltype(_impl_.exclude_exchanges_)*/{}
   , /*decltype(_impl_.assets_)*/nullptr
   , /*decltype(_impl_.window_)*/nullptr
+  , /*decltype(_impl_.update_frequency_)*/nullptr
   , /*decltype(_impl_._cached_size_)*/{}} {}
 struct StreamAggregatesDirectExchangeRateV2RequestV1DefaultTypeInternal {
   PROTOBUF_CONSTEXPR StreamAggregatesDirectExchangeRateV2RequestV1DefaultTypeInternal()
@@ -53,6 +54,7 @@ const uint32_t TableStruct_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_
   PROTOBUF_FIELD_OFFSET(::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1, _impl_.window_),
   PROTOBUF_FIELD_OFFSET(::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1, _impl_.include_exchanges_),
   PROTOBUF_FIELD_OFFSET(::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1, _impl_.exclude_exchanges_),
+  PROTOBUF_FIELD_OFFSET(::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1, _impl_.update_frequency_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, -1, sizeof(::kaikosdk::StreamAggregatesDirectExchangeRateV2RequestV1)},
@@ -66,17 +68,18 @@ const char descriptor_table_protodef_sdk_2fstream_2faggregates_5fdirect_5fexchan
   "\n;sdk/stream/aggregates_direct_exchange_"
   "rate_v2/request.proto\022\010kaikosdk\032\036google/"
   "protobuf/duration.proto\032\025sdk/core/assets"
-  ".proto\"\262\001\n-StreamAggregatesDirectExchang"
+  ".proto\"\347\001\n-StreamAggregatesDirectExchang"
   "eRateV2RequestV1\022 \n\006assets\030\001 \001(\0132\020.kaiko"
   "sdk.Assets\022)\n\006window\030\002 \001(\0132\031.google.prot"
   "obuf.Duration\022\031\n\021include_exchanges\030\003 \003(\t"
-  "\022\031\n\021exclude_exchanges\030\004 \003(\tB\334\001\n7com.kaik"
-  "o.sdk.stream.aggregates_direct_exchange_"
-  "rate_v2P\001Zngithub.com/kaikodata/kaiko-go"
-  "-sdk/stream/aggregates_direct_exchange_r"
-  "ate_v2;aggregates_direct_exchange_rate_v"
-  "2\252\002.KaikoSdk.Stream.AggregatesDirectExch"
-  "angeRateV2b\006proto3"
+  "\022\031\n\021exclude_exchanges\030\004 \003(\t\0223\n\020update_fr"
+  "equency\030\005 \001(\0132\031.google.protobuf.Duration"
+  "B\334\001\n7com.kaiko.sdk.stream.aggregates_dir"
+  "ect_exchange_rate_v2P\001Zngithub.com/kaiko"
+  "data/kaiko-go-sdk/stream/aggregates_dire"
+  "ct_exchange_rate_v2;aggregates_direct_ex"
+  "change_rate_v2\252\002.KaikoSdk.Stream.Aggrega"
+  "tesDirectExchangeRateV2b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_5fv2_2frequest_2eproto_deps[2] = {
   &::descriptor_table_google_2fprotobuf_2fduration_2eproto,
@@ -84,7 +87,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_sdk_2fstream_2faggr
 };
 static ::_pbi::once_flag descriptor_table_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_5fv2_2frequest_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_5fv2_2frequest_2eproto = {
-    false, false, 538, descriptor_table_protodef_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_5fv2_2frequest_2eproto,
+    false, false, 591, descriptor_table_protodef_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_5fv2_2frequest_2eproto,
     "sdk/stream/aggregates_direct_exchange_rate_v2/request.proto",
     &descriptor_table_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_5fv2_2frequest_2eproto_once, descriptor_table_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_5fv2_2frequest_2eproto_deps, 2, 1,
     schemas, file_default_instances, TableStruct_sdk_2fstream_2faggregates_5fdirect_5fexchange_5frate_5fv2_2frequest_2eproto::offsets,
@@ -105,6 +108,7 @@ class StreamAggregatesDirectExchangeRateV2RequestV1::_Internal {
  public:
   static const ::kaikosdk::Assets& assets(const StreamAggregatesDirectExchangeRateV2RequestV1* msg);
   static const ::PROTOBUF_NAMESPACE_ID::Duration& window(const StreamAggregatesDirectExchangeRateV2RequestV1* msg);
+  static const ::PROTOBUF_NAMESPACE_ID::Duration& update_frequency(const StreamAggregatesDirectExchangeRateV2RequestV1* msg);
 };
 
 const ::kaikosdk::Assets&
@@ -114,6 +118,10 @@ StreamAggregatesDirectExchangeRateV2RequestV1::_Internal::assets(const StreamAgg
 const ::PROTOBUF_NAMESPACE_ID::Duration&
 StreamAggregatesDirectExchangeRateV2RequestV1::_Internal::window(const StreamAggregatesDirectExchangeRateV2RequestV1* msg) {
   return *msg->_impl_.window_;
+}
+const ::PROTOBUF_NAMESPACE_ID::Duration&
+StreamAggregatesDirectExchangeRateV2RequestV1::_Internal::update_frequency(const StreamAggregatesDirectExchangeRateV2RequestV1* msg) {
+  return *msg->_impl_.update_frequency_;
 }
 void StreamAggregatesDirectExchangeRateV2RequestV1::clear_assets() {
   if (GetArenaForAllocation() == nullptr && _impl_.assets_ != nullptr) {
@@ -126,6 +134,12 @@ void StreamAggregatesDirectExchangeRateV2RequestV1::clear_window() {
     delete _impl_.window_;
   }
   _impl_.window_ = nullptr;
+}
+void StreamAggregatesDirectExchangeRateV2RequestV1::clear_update_frequency() {
+  if (GetArenaForAllocation() == nullptr && _impl_.update_frequency_ != nullptr) {
+    delete _impl_.update_frequency_;
+  }
+  _impl_.update_frequency_ = nullptr;
 }
 StreamAggregatesDirectExchangeRateV2RequestV1::StreamAggregatesDirectExchangeRateV2RequestV1(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
@@ -141,6 +155,7 @@ StreamAggregatesDirectExchangeRateV2RequestV1::StreamAggregatesDirectExchangeRat
     , decltype(_impl_.exclude_exchanges_){from._impl_.exclude_exchanges_}
     , decltype(_impl_.assets_){nullptr}
     , decltype(_impl_.window_){nullptr}
+    , decltype(_impl_.update_frequency_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}};
 
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
@@ -149,6 +164,9 @@ StreamAggregatesDirectExchangeRateV2RequestV1::StreamAggregatesDirectExchangeRat
   }
   if (from._internal_has_window()) {
     _this->_impl_.window_ = new ::PROTOBUF_NAMESPACE_ID::Duration(*from._impl_.window_);
+  }
+  if (from._internal_has_update_frequency()) {
+    _this->_impl_.update_frequency_ = new ::PROTOBUF_NAMESPACE_ID::Duration(*from._impl_.update_frequency_);
   }
   // @@protoc_insertion_point(copy_constructor:kaikosdk.StreamAggregatesDirectExchangeRateV2RequestV1)
 }
@@ -162,6 +180,7 @@ inline void StreamAggregatesDirectExchangeRateV2RequestV1::SharedCtor(
     , decltype(_impl_.exclude_exchanges_){arena}
     , decltype(_impl_.assets_){nullptr}
     , decltype(_impl_.window_){nullptr}
+    , decltype(_impl_.update_frequency_){nullptr}
     , /*decltype(_impl_._cached_size_)*/{}
   };
 }
@@ -181,6 +200,7 @@ inline void StreamAggregatesDirectExchangeRateV2RequestV1::SharedDtor() {
   _impl_.exclude_exchanges_.~RepeatedPtrField();
   if (this != internal_default_instance()) delete _impl_.assets_;
   if (this != internal_default_instance()) delete _impl_.window_;
+  if (this != internal_default_instance()) delete _impl_.update_frequency_;
 }
 
 void StreamAggregatesDirectExchangeRateV2RequestV1::SetCachedSize(int size) const {
@@ -203,6 +223,10 @@ void StreamAggregatesDirectExchangeRateV2RequestV1::Clear() {
     delete _impl_.window_;
   }
   _impl_.window_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.update_frequency_ != nullptr) {
+    delete _impl_.update_frequency_;
+  }
+  _impl_.update_frequency_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -255,6 +279,14 @@ const char* StreamAggregatesDirectExchangeRateV2RequestV1::_InternalParse(const 
             CHK_(::_pbi::VerifyUTF8(str, "kaikosdk.StreamAggregatesDirectExchangeRateV2RequestV1.exclude_exchanges"));
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
+        } else
+          goto handle_unusual;
+        continue;
+      // .google.protobuf.Duration update_frequency = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_update_frequency(), ptr);
+          CHK_(ptr);
         } else
           goto handle_unusual;
         continue;
@@ -321,6 +353,13 @@ uint8_t* StreamAggregatesDirectExchangeRateV2RequestV1::_InternalSerialize(
     target = stream->WriteString(4, s, target);
   }
 
+  // .google.protobuf.Duration update_frequency = 5;
+  if (this->_internal_has_update_frequency()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, _Internal::update_frequency(this),
+        _Internal::update_frequency(this).GetCachedSize(), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -367,6 +406,13 @@ size_t StreamAggregatesDirectExchangeRateV2RequestV1::ByteSizeLong() const {
         *_impl_.window_);
   }
 
+  // .google.protobuf.Duration update_frequency = 5;
+  if (this->_internal_has_update_frequency()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *_impl_.update_frequency_);
+  }
+
   return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
@@ -395,6 +441,10 @@ void StreamAggregatesDirectExchangeRateV2RequestV1::MergeImpl(::PROTOBUF_NAMESPA
     _this->_internal_mutable_window()->::PROTOBUF_NAMESPACE_ID::Duration::MergeFrom(
         from._internal_window());
   }
+  if (from._internal_has_update_frequency()) {
+    _this->_internal_mutable_update_frequency()->::PROTOBUF_NAMESPACE_ID::Duration::MergeFrom(
+        from._internal_update_frequency());
+  }
   _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
@@ -415,8 +465,8 @@ void StreamAggregatesDirectExchangeRateV2RequestV1::InternalSwap(StreamAggregate
   _impl_.include_exchanges_.InternalSwap(&other->_impl_.include_exchanges_);
   _impl_.exclude_exchanges_.InternalSwap(&other->_impl_.exclude_exchanges_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(StreamAggregatesDirectExchangeRateV2RequestV1, _impl_.window_)
-      + sizeof(StreamAggregatesDirectExchangeRateV2RequestV1::_impl_.window_)
+      PROTOBUF_FIELD_OFFSET(StreamAggregatesDirectExchangeRateV2RequestV1, _impl_.update_frequency_)
+      + sizeof(StreamAggregatesDirectExchangeRateV2RequestV1::_impl_.update_frequency_)
       - PROTOBUF_FIELD_OFFSET(StreamAggregatesDirectExchangeRateV2RequestV1, _impl_.assets_)>(
           reinterpret_cast<char*>(&_impl_.assets_),
           reinterpret_cast<char*>(&other->_impl_.assets_));

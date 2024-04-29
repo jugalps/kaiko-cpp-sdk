@@ -183,6 +183,7 @@ class StreamAggregatesSpotExchangeRateV2RequestV1 final :
     kExcludeExchangesFieldNumber = 4,
     kAssetsFieldNumber = 1,
     kWindowFieldNumber = 2,
+    kUpdateFrequencyFieldNumber = 5,
   };
   // repeated string include_exchanges = 3;
   int include_exchanges_size() const;
@@ -268,6 +269,24 @@ class StreamAggregatesSpotExchangeRateV2RequestV1 final :
       ::PROTOBUF_NAMESPACE_ID::Duration* window);
   ::PROTOBUF_NAMESPACE_ID::Duration* unsafe_arena_release_window();
 
+  // .google.protobuf.Duration update_frequency = 5;
+  bool has_update_frequency() const;
+  private:
+  bool _internal_has_update_frequency() const;
+  public:
+  void clear_update_frequency();
+  const ::PROTOBUF_NAMESPACE_ID::Duration& update_frequency() const;
+  PROTOBUF_NODISCARD ::PROTOBUF_NAMESPACE_ID::Duration* release_update_frequency();
+  ::PROTOBUF_NAMESPACE_ID::Duration* mutable_update_frequency();
+  void set_allocated_update_frequency(::PROTOBUF_NAMESPACE_ID::Duration* update_frequency);
+  private:
+  const ::PROTOBUF_NAMESPACE_ID::Duration& _internal_update_frequency() const;
+  ::PROTOBUF_NAMESPACE_ID::Duration* _internal_mutable_update_frequency();
+  public:
+  void unsafe_arena_set_allocated_update_frequency(
+      ::PROTOBUF_NAMESPACE_ID::Duration* update_frequency);
+  ::PROTOBUF_NAMESPACE_ID::Duration* unsafe_arena_release_update_frequency();
+
   // @@protoc_insertion_point(class_scope:kaikosdk.StreamAggregatesSpotExchangeRateV2RequestV1)
  private:
   class _Internal;
@@ -280,6 +299,7 @@ class StreamAggregatesSpotExchangeRateV2RequestV1 final :
     ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> exclude_exchanges_;
     ::kaikosdk::Assets* assets_;
     ::PROTOBUF_NAMESPACE_ID::Duration* window_;
+    ::PROTOBUF_NAMESPACE_ID::Duration* update_frequency_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   };
   union { Impl_ _impl_; };
@@ -614,6 +634,91 @@ inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
 StreamAggregatesSpotExchangeRateV2RequestV1::mutable_exclude_exchanges() {
   // @@protoc_insertion_point(field_mutable_list:kaikosdk.StreamAggregatesSpotExchangeRateV2RequestV1.exclude_exchanges)
   return &_impl_.exclude_exchanges_;
+}
+
+// .google.protobuf.Duration update_frequency = 5;
+inline bool StreamAggregatesSpotExchangeRateV2RequestV1::_internal_has_update_frequency() const {
+  return this != internal_default_instance() && _impl_.update_frequency_ != nullptr;
+}
+inline bool StreamAggregatesSpotExchangeRateV2RequestV1::has_update_frequency() const {
+  return _internal_has_update_frequency();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Duration& StreamAggregatesSpotExchangeRateV2RequestV1::_internal_update_frequency() const {
+  const ::PROTOBUF_NAMESPACE_ID::Duration* p = _impl_.update_frequency_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Duration&>(
+      ::PROTOBUF_NAMESPACE_ID::_Duration_default_instance_);
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Duration& StreamAggregatesSpotExchangeRateV2RequestV1::update_frequency() const {
+  // @@protoc_insertion_point(field_get:kaikosdk.StreamAggregatesSpotExchangeRateV2RequestV1.update_frequency)
+  return _internal_update_frequency();
+}
+inline void StreamAggregatesSpotExchangeRateV2RequestV1::unsafe_arena_set_allocated_update_frequency(
+    ::PROTOBUF_NAMESPACE_ID::Duration* update_frequency) {
+  if (GetArenaForAllocation() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.update_frequency_);
+  }
+  _impl_.update_frequency_ = update_frequency;
+  if (update_frequency) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:kaikosdk.StreamAggregatesSpotExchangeRateV2RequestV1.update_frequency)
+}
+inline ::PROTOBUF_NAMESPACE_ID::Duration* StreamAggregatesSpotExchangeRateV2RequestV1::release_update_frequency() {
+  
+  ::PROTOBUF_NAMESPACE_ID::Duration* temp = _impl_.update_frequency_;
+  _impl_.update_frequency_ = nullptr;
+#ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
+  auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
+  temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  if (GetArenaForAllocation() == nullptr) { delete old; }
+#else  // PROTOBUF_FORCE_COPY_IN_RELEASE
+  if (GetArenaForAllocation() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+#endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Duration* StreamAggregatesSpotExchangeRateV2RequestV1::unsafe_arena_release_update_frequency() {
+  // @@protoc_insertion_point(field_release:kaikosdk.StreamAggregatesSpotExchangeRateV2RequestV1.update_frequency)
+  
+  ::PROTOBUF_NAMESPACE_ID::Duration* temp = _impl_.update_frequency_;
+  _impl_.update_frequency_ = nullptr;
+  return temp;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Duration* StreamAggregatesSpotExchangeRateV2RequestV1::_internal_mutable_update_frequency() {
+  
+  if (_impl_.update_frequency_ == nullptr) {
+    auto* p = CreateMaybeMessage<::PROTOBUF_NAMESPACE_ID::Duration>(GetArenaForAllocation());
+    _impl_.update_frequency_ = p;
+  }
+  return _impl_.update_frequency_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::Duration* StreamAggregatesSpotExchangeRateV2RequestV1::mutable_update_frequency() {
+  ::PROTOBUF_NAMESPACE_ID::Duration* _msg = _internal_mutable_update_frequency();
+  // @@protoc_insertion_point(field_mutable:kaikosdk.StreamAggregatesSpotExchangeRateV2RequestV1.update_frequency)
+  return _msg;
+}
+inline void StreamAggregatesSpotExchangeRateV2RequestV1::set_allocated_update_frequency(::PROTOBUF_NAMESPACE_ID::Duration* update_frequency) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.update_frequency_);
+  }
+  if (update_frequency) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(update_frequency));
+    if (message_arena != submessage_arena) {
+      update_frequency = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, update_frequency, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  _impl_.update_frequency_ = update_frequency;
+  // @@protoc_insertion_point(field_set_allocated:kaikosdk.StreamAggregatesSpotExchangeRateV2RequestV1.update_frequency)
 }
 
 #ifdef __GNUC__
