@@ -34,71 +34,85 @@ const char descriptor_table_protodef_sdk_2fsdk_2eproto[] PROTOBUF_SECTION_VARIAB
   "eam/aggregated_price_v1/response.proto\032,"
   "sdk/stream/aggregated_quote_v2/request.p"
   "roto\032-sdk/stream/aggregated_quote_v2/res"
-  "ponse.proto\032,sdk/stream/aggregates_ohlcv"
-  "_v1/request.proto\032-sdk/stream/aggregates"
-  "_ohlcv_v1/response.proto\032+sdk/stream/agg"
-  "regates_vwap_v1/request.proto\032,sdk/strea"
-  "m/aggregates_vwap_v1/response.proto\032;sdk"
-  "/stream/aggregates_direct_exchange_rate_"
-  "v2/request.proto\032<sdk/stream/aggregates_"
-  "direct_exchange_rate_v2/response.proto\0329"
-  "sdk/stream/aggregates_spot_exchange_rate"
-  "_v2/request.proto\032:sdk/stream/aggregates"
-  "_spot_exchange_rate_v2/response.proto\032!s"
-  "dk/stream/index_v1/request.proto\032\"sdk/st"
-  "ream/index_v1/response.proto\032.sdk/stream"
-  "/index_multi_assets_v1/request.proto\032/sd"
-  "k/stream/index_multi_assets_v1/response."
-  "proto\032,sdk/stream/index_forex_rate_v1/re"
-  "quest.proto\032-sdk/stream/index_forex_rate"
-  "_v1/response.proto\032)sdk/stream/market_up"
-  "date_v1/request.proto\032*sdk/stream/market"
-  "_update_v1/response.proto\032\"sdk/stream/tr"
-  "ades_v1/request.proto\032#sdk/stream/trades"
-  "_v1/response.proto2\206\001\n\036StreamAggregatedQ"
-  "uoteServiceV2\022d\n\tSubscribe\022(.kaikosdk.St"
-  "reamAggregatedQuoteRequestV2\032).kaikosdk."
-  "StreamAggregatedQuoteResponseV2\"\0000\0012\211\001\n\036"
-  "StreamAggregatedPriceServiceV1\022g\n\tSubscr"
-  "ibe\022(.kaikosdk.StreamAggregatedPriceRequ"
-  "estV1\032).kaikosdk.StreamAggregatedPriceRe"
-  "sponseV1\"\003\210\002\0010\0012\206\001\n\036StreamAggregatesOHLC"
-  "VServiceV1\022d\n\tSubscribe\022(.kaikosdk.Strea"
-  "mAggregatesOHLCVRequestV1\032).kaikosdk.Str"
-  "eamAggregatesOHLCVResponseV1\"\0000\0012k\n\025Stre"
-  "amTradesServiceV1\022R\n\tSubscribe\022\037.kaikosd"
-  "k.StreamTradesRequestV1\032 .kaikosdk.Strea"
-  "mTradesResponseV1\"\0000\0012\203\001\n\035StreamAggregat"
-  "esVWAPServiceV1\022b\n\tSubscribe\022\'.kaikosdk."
-  "StreamAggregatesVWAPRequestV1\032(.kaikosdk"
-  ".StreamAggregatesVWAPResponseV1\"\0000\0012v\n\024S"
-  "treamIndexServiceV1\022^\n\tSubscribe\022%.kaiko"
-  "sdk.StreamIndexServiceRequestV1\032&.kaikos"
-  "dk.StreamIndexServiceResponseV1\"\0000\0012\227\001\n\037"
-  "StreamIndexMultiAssetsServiceV1\022t\n\tSubsc"
-  "ribe\0220.kaikosdk.StreamIndexMultiAssetsSe"
-  "rviceRequestV1\0321.kaikosdk.StreamIndexMul"
-  "tiAssetsServiceResponseV1\"\0000\0012}\n\033StreamM"
-  "arketUpdateServiceV1\022^\n\tSubscribe\022%.kaik"
-  "osdk.StreamMarketUpdateRequestV1\032&.kaiko"
-  "sdk.StreamMarketUpdateResponseV1\"\0000\0012\255\001\n"
-  "+StreamAggregatesSpotExchangeRateV2Servi"
-  "ceV1\022~\n\tSubscribe\0225.kaikosdk.StreamAggre"
-  "gatesSpotExchangeRateV2RequestV1\0326.kaiko"
-  "sdk.StreamAggregatesSpotExchangeRateV2Re"
-  "sponseV1\"\0000\0012\270\001\n1StreamAggregatesSpotDir"
-  "ectExchangeRateV2ServiceV1\022\202\001\n\tSubscribe"
-  "\0227.kaikosdk.StreamAggregatesDirectExchan"
-  "geRateV2RequestV1\0328.kaikosdk.StreamAggre"
-  "gatesDirectExchangeRateV2ResponseV1\"\0000\0012"
-  "\221\001\n\035StreamIndexForexRateServiceV1\022p\n\tSub"
-  "scribe\022..kaikosdk.StreamIndexForexRateSe"
-  "rviceRequestV1\032/.kaikosdk.StreamIndexFor"
-  "exRateServiceResponseV1\"\0000\001BR\n\rcom.kaiko"
-  ".sdkB\010SdkProtoP\001Z*github.com/kaikodata/k"
-  "aiko-go-sdk;kaikosdk\252\002\010KaikoSdkb\006proto3"
+  "ponse.proto\032;sdk/stream/aggregates_direc"
+  "t_exchange_rate_v2/request.proto\032<sdk/st"
+  "ream/aggregates_direct_exchange_rate_v2/"
+  "response.proto\032,sdk/stream/aggregates_oh"
+  "lcv_v1/request.proto\032-sdk/stream/aggrega"
+  "tes_ohlcv_v1/response.proto\0329sdk/stream/"
+  "aggregates_spot_exchange_rate_v2/request"
+  ".proto\032:sdk/stream/aggregates_spot_excha"
+  "nge_rate_v2/response.proto\032+sdk/stream/a"
+  "ggregates_vwap_v1/request.proto\032,sdk/str"
+  "eam/aggregates_vwap_v1/response.proto\032:s"
+  "dk/stream/derivatives_instrument_metrics"
+  "_v1/request.proto\032;sdk/stream/derivative"
+  "s_instrument_metrics_v1/response.proto\032,"
+  "sdk/stream/index_forex_rate_v1/request.p"
+  "roto\032-sdk/stream/index_forex_rate_v1/res"
+  "ponse.proto\032.sdk/stream/index_multi_asse"
+  "ts_v1/request.proto\032/sdk/stream/index_mu"
+  "lti_assets_v1/response.proto\032!sdk/stream"
+  "/index_v1/request.proto\032\"sdk/stream/inde"
+  "x_v1/response.proto\032-sdk/stream/iv_svi_p"
+  "arameters_v1/request.proto\032.sdk/stream/i"
+  "v_svi_parameters_v1/response.proto\032)sdk/"
+  "stream/market_update_v1/request.proto\032*s"
+  "dk/stream/market_update_v1/response.prot"
+  "o\032\"sdk/stream/trades_v1/request.proto\032#s"
+  "dk/stream/trades_v1/response.proto2\206\001\n\036S"
+  "treamAggregatedQuoteServiceV2\022d\n\tSubscri"
+  "be\022(.kaikosdk.StreamAggregatedQuoteReque"
+  "stV2\032).kaikosdk.StreamAggregatedQuoteRes"
+  "ponseV2\"\0000\0012\211\001\n\036StreamAggregatedPriceSer"
+  "viceV1\022g\n\tSubscribe\022(.kaikosdk.StreamAgg"
+  "regatedPriceRequestV1\032).kaikosdk.StreamA"
+  "ggregatedPriceResponseV1\"\003\210\002\0010\0012\206\001\n\036Stre"
+  "amAggregatesOHLCVServiceV1\022d\n\tSubscribe\022"
+  "(.kaikosdk.StreamAggregatesOHLCVRequestV"
+  "1\032).kaikosdk.StreamAggregatesOHLCVRespon"
+  "seV1\"\0000\0012k\n\025StreamTradesServiceV1\022R\n\tSub"
+  "scribe\022\037.kaikosdk.StreamTradesRequestV1\032"
+  " .kaikosdk.StreamTradesResponseV1\"\0000\0012\203\001"
+  "\n\035StreamAggregatesVWAPServiceV1\022b\n\tSubsc"
+  "ribe\022\'.kaikosdk.StreamAggregatesVWAPRequ"
+  "estV1\032(.kaikosdk.StreamAggregatesVWAPRes"
+  "ponseV1\"\0000\0012v\n\024StreamIndexServiceV1\022^\n\tS"
+  "ubscribe\022%.kaikosdk.StreamIndexServiceRe"
+  "questV1\032&.kaikosdk.StreamIndexServiceRes"
+  "ponseV1\"\0000\0012\227\001\n\037StreamIndexMultiAssetsSe"
+  "rviceV1\022t\n\tSubscribe\0220.kaikosdk.StreamIn"
+  "dexMultiAssetsServiceRequestV1\0321.kaikosd"
+  "k.StreamIndexMultiAssetsServiceResponseV"
+  "1\"\0000\0012}\n\033StreamMarketUpdateServiceV1\022^\n\t"
+  "Subscribe\022%.kaikosdk.StreamMarketUpdateR"
+  "equestV1\032&.kaikosdk.StreamMarketUpdateRe"
+  "sponseV1\"\0000\0012\255\001\n+StreamAggregatesSpotExc"
+  "hangeRateV2ServiceV1\022~\n\tSubscribe\0225.kaik"
+  "osdk.StreamAggregatesSpotExchangeRateV2R"
+  "equestV1\0326.kaikosdk.StreamAggregatesSpot"
+  "ExchangeRateV2ResponseV1\"\0000\0012\270\001\n1StreamA"
+  "ggregatesSpotDirectExchangeRateV2Service"
+  "V1\022\202\001\n\tSubscribe\0227.kaikosdk.StreamAggreg"
+  "atesDirectExchangeRateV2RequestV1\0328.kaik"
+  "osdk.StreamAggregatesDirectExchangeRateV"
+  "2ResponseV1\"\0000\0012\221\001\n\035StreamIndexForexRate"
+  "ServiceV1\022p\n\tSubscribe\022..kaikosdk.Stream"
+  "IndexForexRateServiceRequestV1\032/.kaikosd"
+  "k.StreamIndexForexRateServiceResponseV1\""
+  "\0000\0012\246\001\n$StreamDerivativesInstrumentMetri"
+  "csV1\022~\n\tSubscribe\0225.kaikosdk.StreamDeriv"
+  "ativesInstrumentMetricsRequestV1\0326.kaiko"
+  "sdk.StreamDerivativesInstrumentMetricsRe"
+  "sponseV1\"\0000\0012\206\001\n\036StreamIvSviParametersSe"
+  "rviceV1\022d\n\tSubscribe\022(.kaikosdk.StreamIv"
+  "SviParametersRequestV1\032).kaikosdk.Stream"
+  "IvSviParametersResponseV1\"\0000\001BR\n\rcom.kai"
+  "ko.sdkB\010SdkProtoP\001Z*github.com/kaikodata"
+  "/kaiko-go-sdk;kaikosdk\252\002\010KaikoSdkb\006proto"
+  "3"
   ;
-static const ::_pbi::DescriptorTable* const descriptor_table_sdk_2fsdk_2eproto_deps[22] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_sdk_2fsdk_2eproto_deps[26] = {
   &::descriptor_table_sdk_2fstream_2faggregated_5fprice_5fv1_2frequest_2eproto,
   &::descriptor_table_sdk_2fstream_2faggregated_5fprice_5fv1_2fresponse_2eproto,
   &::descriptor_table_sdk_2fstream_2faggregated_5fquote_5fv2_2frequest_2eproto,
@@ -111,12 +125,16 @@ static const ::_pbi::DescriptorTable* const descriptor_table_sdk_2fsdk_2eproto_d
   &::descriptor_table_sdk_2fstream_2faggregates_5fspot_5fexchange_5frate_5fv2_2fresponse_2eproto,
   &::descriptor_table_sdk_2fstream_2faggregates_5fvwap_5fv1_2frequest_2eproto,
   &::descriptor_table_sdk_2fstream_2faggregates_5fvwap_5fv1_2fresponse_2eproto,
+  &::descriptor_table_sdk_2fstream_2fderivatives_5finstrument_5fmetrics_5fv1_2frequest_2eproto,
+  &::descriptor_table_sdk_2fstream_2fderivatives_5finstrument_5fmetrics_5fv1_2fresponse_2eproto,
   &::descriptor_table_sdk_2fstream_2findex_5fforex_5frate_5fv1_2frequest_2eproto,
   &::descriptor_table_sdk_2fstream_2findex_5fforex_5frate_5fv1_2fresponse_2eproto,
   &::descriptor_table_sdk_2fstream_2findex_5fmulti_5fassets_5fv1_2frequest_2eproto,
   &::descriptor_table_sdk_2fstream_2findex_5fmulti_5fassets_5fv1_2fresponse_2eproto,
   &::descriptor_table_sdk_2fstream_2findex_5fv1_2frequest_2eproto,
   &::descriptor_table_sdk_2fstream_2findex_5fv1_2fresponse_2eproto,
+  &::descriptor_table_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2frequest_2eproto,
+  &::descriptor_table_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2fresponse_2eproto,
   &::descriptor_table_sdk_2fstream_2fmarket_5fupdate_5fv1_2frequest_2eproto,
   &::descriptor_table_sdk_2fstream_2fmarket_5fupdate_5fv1_2fresponse_2eproto,
   &::descriptor_table_sdk_2fstream_2ftrades_5fv1_2frequest_2eproto,
@@ -124,9 +142,9 @@ static const ::_pbi::DescriptorTable* const descriptor_table_sdk_2fsdk_2eproto_d
 };
 static ::_pbi::once_flag descriptor_table_sdk_2fsdk_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_sdk_2fsdk_2eproto = {
-    false, false, 2719, descriptor_table_protodef_sdk_2fsdk_2eproto,
+    false, false, 3241, descriptor_table_protodef_sdk_2fsdk_2eproto,
     "sdk/sdk.proto",
-    &descriptor_table_sdk_2fsdk_2eproto_once, descriptor_table_sdk_2fsdk_2eproto_deps, 22, 0,
+    &descriptor_table_sdk_2fsdk_2eproto_once, descriptor_table_sdk_2fsdk_2eproto_deps, 26, 0,
     schemas, file_default_instances, TableStruct_sdk_2fsdk_2eproto::offsets,
     nullptr, file_level_enum_descriptors_sdk_2fsdk_2eproto,
     file_level_service_descriptors_sdk_2fsdk_2eproto,
