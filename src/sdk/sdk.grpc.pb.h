@@ -2339,10 +2339,10 @@ class StreamIndexForexRateServiceV1 final {
 };
 
 // Service for streaming derivatives instrument metrics V1
-class StreamDerivativesInstrumentMetricsV1 final {
+class StreamDerivativesInstrumentMetricsServiceV1 final {
  public:
   static constexpr char const* service_full_name() {
-    return "kaikosdk.StreamDerivativesInstrumentMetricsV1";
+    return "kaikosdk.StreamDerivativesInstrumentMetricsServiceV1";
   }
   class StubInterface {
    public:

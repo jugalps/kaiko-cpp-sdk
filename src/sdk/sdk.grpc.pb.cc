@@ -615,42 +615,42 @@ StreamIndexForexRateServiceV1::Service::~Service() {
 }
 
 
-static const char* StreamDerivativesInstrumentMetricsV1_method_names[] = {
-  "/kaikosdk.StreamDerivativesInstrumentMetricsV1/Subscribe",
+static const char* StreamDerivativesInstrumentMetricsServiceV1_method_names[] = {
+  "/kaikosdk.StreamDerivativesInstrumentMetricsServiceV1/Subscribe",
 };
 
-std::unique_ptr< StreamDerivativesInstrumentMetricsV1::Stub> StreamDerivativesInstrumentMetricsV1::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+std::unique_ptr< StreamDerivativesInstrumentMetricsServiceV1::Stub> StreamDerivativesInstrumentMetricsServiceV1::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
   (void)options;
-  std::unique_ptr< StreamDerivativesInstrumentMetricsV1::Stub> stub(new StreamDerivativesInstrumentMetricsV1::Stub(channel, options));
+  std::unique_ptr< StreamDerivativesInstrumentMetricsServiceV1::Stub> stub(new StreamDerivativesInstrumentMetricsServiceV1::Stub(channel, options));
   return stub;
 }
 
-StreamDerivativesInstrumentMetricsV1::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
-  : channel_(channel), rpcmethod_Subscribe_(StreamDerivativesInstrumentMetricsV1_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+StreamDerivativesInstrumentMetricsServiceV1::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
+  : channel_(channel), rpcmethod_Subscribe_(StreamDerivativesInstrumentMetricsServiceV1_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
   {}
 
-::grpc::ClientReader< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>* StreamDerivativesInstrumentMetricsV1::Stub::SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1& request) {
+::grpc::ClientReader< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>* StreamDerivativesInstrumentMetricsServiceV1::Stub::SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1& request) {
   return ::grpc::internal::ClientReaderFactory< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>::Create(channel_.get(), rpcmethod_Subscribe_, context, request);
 }
 
-void StreamDerivativesInstrumentMetricsV1::Stub::async::Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>* reactor) {
+void StreamDerivativesInstrumentMetricsServiceV1::Stub::async::Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>* reactor) {
   ::grpc::internal::ClientCallbackReaderFactory< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>::Create(stub_->channel_.get(), stub_->rpcmethod_Subscribe_, context, request, reactor);
 }
 
-::grpc::ClientAsyncReader< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>* StreamDerivativesInstrumentMetricsV1::Stub::AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1& request, ::grpc::CompletionQueue* cq, void* tag) {
+::grpc::ClientAsyncReader< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>* StreamDerivativesInstrumentMetricsServiceV1::Stub::AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1& request, ::grpc::CompletionQueue* cq, void* tag) {
   return ::grpc::internal::ClientAsyncReaderFactory< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>::Create(channel_.get(), cq, rpcmethod_Subscribe_, context, request, true, tag);
 }
 
-::grpc::ClientAsyncReader< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>* StreamDerivativesInstrumentMetricsV1::Stub::PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1& request, ::grpc::CompletionQueue* cq) {
+::grpc::ClientAsyncReader< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>* StreamDerivativesInstrumentMetricsServiceV1::Stub::PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::internal::ClientAsyncReaderFactory< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>::Create(channel_.get(), cq, rpcmethod_Subscribe_, context, request, false, nullptr);
 }
 
-StreamDerivativesInstrumentMetricsV1::Service::Service() {
+StreamDerivativesInstrumentMetricsServiceV1::Service::Service() {
   AddMethod(new ::grpc::internal::RpcServiceMethod(
-      StreamDerivativesInstrumentMetricsV1_method_names[0],
+      StreamDerivativesInstrumentMetricsServiceV1_method_names[0],
       ::grpc::internal::RpcMethod::SERVER_STREAMING,
-      new ::grpc::internal::ServerStreamingHandler< StreamDerivativesInstrumentMetricsV1::Service, ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1, ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>(
-          [](StreamDerivativesInstrumentMetricsV1::Service* service,
+      new ::grpc::internal::ServerStreamingHandler< StreamDerivativesInstrumentMetricsServiceV1::Service, ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1, ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>(
+          [](StreamDerivativesInstrumentMetricsServiceV1::Service* service,
              ::grpc::ServerContext* ctx,
              const ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1* req,
              ::grpc::ServerWriter<::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>* writer) {
@@ -658,10 +658,10 @@ StreamDerivativesInstrumentMetricsV1::Service::Service() {
              }, this)));
 }
 
-StreamDerivativesInstrumentMetricsV1::Service::~Service() {
+StreamDerivativesInstrumentMetricsServiceV1::Service::~Service() {
 }
 
-::grpc::Status StreamDerivativesInstrumentMetricsV1::Service::Subscribe(::grpc::ServerContext* context, const ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1* request, ::grpc::ServerWriter< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>* writer) {
+::grpc::Status StreamDerivativesInstrumentMetricsServiceV1::Service::Subscribe(::grpc::ServerContext* context, const ::kaikosdk::StreamDerivativesInstrumentMetricsRequestV1* request, ::grpc::ServerWriter< ::kaikosdk::StreamDerivativesInstrumentMetricsResponseV1>* writer) {
   (void) context;
   (void) request;
   (void) writer;

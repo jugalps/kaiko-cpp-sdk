@@ -100,17 +100,17 @@ const char descriptor_table_protodef_sdk_2fsdk_2eproto[] PROTOBUF_SECTION_VARIAB
   "ServiceV1\022p\n\tSubscribe\022..kaikosdk.Stream"
   "IndexForexRateServiceRequestV1\032/.kaikosd"
   "k.StreamIndexForexRateServiceResponseV1\""
-  "\0000\0012\246\001\n$StreamDerivativesInstrumentMetri"
-  "csV1\022~\n\tSubscribe\0225.kaikosdk.StreamDeriv"
-  "ativesInstrumentMetricsRequestV1\0326.kaiko"
-  "sdk.StreamDerivativesInstrumentMetricsRe"
-  "sponseV1\"\0000\0012\206\001\n\036StreamIvSviParametersSe"
-  "rviceV1\022d\n\tSubscribe\022(.kaikosdk.StreamIv"
-  "SviParametersRequestV1\032).kaikosdk.Stream"
-  "IvSviParametersResponseV1\"\0000\001BR\n\rcom.kai"
-  "ko.sdkB\010SdkProtoP\001Z*github.com/kaikodata"
-  "/kaiko-go-sdk;kaikosdk\252\002\010KaikoSdkb\006proto"
-  "3"
+  "\0000\0012\255\001\n+StreamDerivativesInstrumentMetri"
+  "csServiceV1\022~\n\tSubscribe\0225.kaikosdk.Stre"
+  "amDerivativesInstrumentMetricsRequestV1\032"
+  "6.kaikosdk.StreamDerivativesInstrumentMe"
+  "tricsResponseV1\"\0000\0012\206\001\n\036StreamIvSviParam"
+  "etersServiceV1\022d\n\tSubscribe\022(.kaikosdk.S"
+  "treamIvSviParametersRequestV1\032).kaikosdk"
+  ".StreamIvSviParametersResponseV1\"\0000\001BR\n\r"
+  "com.kaiko.sdkB\010SdkProtoP\001Z*github.com/ka"
+  "ikodata/kaiko-go-sdk;kaikosdk\252\002\010KaikoSdk"
+  "b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_sdk_2fsdk_2eproto_deps[26] = {
   &::descriptor_table_sdk_2fstream_2faggregated_5fprice_5fv1_2frequest_2eproto,
@@ -142,7 +142,7 @@ static const ::_pbi::DescriptorTable* const descriptor_table_sdk_2fsdk_2eproto_d
 };
 static ::_pbi::once_flag descriptor_table_sdk_2fsdk_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_sdk_2fsdk_2eproto = {
-    false, false, 3241, descriptor_table_protodef_sdk_2fsdk_2eproto,
+    false, false, 3248, descriptor_table_protodef_sdk_2fsdk_2eproto,
     "sdk/sdk.proto",
     &descriptor_table_sdk_2fsdk_2eproto_once, descriptor_table_sdk_2fsdk_2eproto_deps, 26, 0,
     schemas, file_default_instances, TableStruct_sdk_2fsdk_2eproto::offsets,
