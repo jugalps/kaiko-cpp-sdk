@@ -98,19 +98,19 @@ const char descriptor_table_protodef_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2
   "eft_slope\030\n \001(\t\022\023\n\013right_slope\030\013 \001(\t\022\034\n\024"
   "min_implied_variance\030\014 \001(\t\022\024\n\014current_sp"
   "ot\030\r \001(\t\022\025\n\rinterest_rate\030\016 \001(\t\022,\n\010ts_ev"
-  "ent\030\017 \001(\0132\032.google.protobuf.TimestampB\252\001"
+  "ent\030\017 \001(\0132\032.google.protobuf.TimestampB\244\001"
   "\n)com.kaiko.sdk.stream.iv_svi_parameters"
   "_v1P\001ZRgithub.com/kaikodata/kaiko-go-sdk"
   "/stream/iv_svi_parameters_v1;iv_svi_para"
-  "meters_v1\252\002&KaikoSdk.Stream.StreamIvSviP"
-  "arameterV1b\006proto3"
+  "meters_v1\252\002 KaikoSdk.Stream.IvSviParamet"
+  "erV1b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2fresponse_2eproto_deps[1] = {
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2fresponse_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2fresponse_2eproto = {
-    false, false, 738, descriptor_table_protodef_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2fresponse_2eproto,
+    false, false, 732, descriptor_table_protodef_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2fresponse_2eproto,
     "sdk/stream/iv_svi_parameters_v1/response.proto",
     &descriptor_table_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2fresponse_2eproto_once, descriptor_table_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2fresponse_2eproto_deps, 1, 1,
     schemas, file_default_instances, TableStruct_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2fresponse_2eproto::offsets,

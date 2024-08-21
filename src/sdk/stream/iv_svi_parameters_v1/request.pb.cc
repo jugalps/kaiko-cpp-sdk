@@ -63,18 +63,18 @@ const char descriptor_table_protodef_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2
   "t.proto\022\010kaikosdk\032\025sdk/core/assets.proto"
   "\"U\n\036StreamIvSviParametersRequestV1\022 \n\006as"
   "sets\030\001 \001(\0132\020.kaikosdk.Assets\022\021\n\texchange"
-  "s\030\002 \001(\tB\252\001\n)com.kaiko.sdk.stream.iv_svi_"
+  "s\030\002 \001(\tB\244\001\n)com.kaiko.sdk.stream.iv_svi_"
   "parameters_v1P\001ZRgithub.com/kaikodata/ka"
   "iko-go-sdk/stream/iv_svi_parameters_v1;i"
-  "v_svi_parameters_v1\252\002&KaikoSdk.Stream.St"
-  "reamIvSviParameterV1b\006proto3"
+  "v_svi_parameters_v1\252\002 KaikoSdk.Stream.Iv"
+  "SviParameterV1b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2frequest_2eproto_deps[1] = {
   &::descriptor_table_sdk_2fcore_2fassets_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2frequest_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2frequest_2eproto = {
-    false, false, 348, descriptor_table_protodef_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2frequest_2eproto,
+    false, false, 342, descriptor_table_protodef_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2frequest_2eproto,
     "sdk/stream/iv_svi_parameters_v1/request.proto",
     &descriptor_table_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2frequest_2eproto_once, descriptor_table_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2frequest_2eproto_deps, 1, 1,
     schemas, file_default_instances, TableStruct_sdk_2fstream_2fiv_5fsvi_5fparameters_5fv1_2frequest_2eproto::offsets,
