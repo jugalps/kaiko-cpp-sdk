@@ -42,6 +42,8 @@
 #include "sdk/stream/aggregates_vwap_v1/response.pb.h"
 #include "sdk/stream/derivatives_instrument_metrics_v1/request.pb.h"
 #include "sdk/stream/derivatives_instrument_metrics_v1/response.pb.h"
+#include "sdk/stream/exotic_indices_v1/request.pb.h"
+#include "sdk/stream/exotic_indices_v1/response.pb.h"
 #include "sdk/stream/index_forex_rate_v1/request.pb.h"
 #include "sdk/stream/index_forex_rate_v1/response.pb.h"
 #include "sdk/stream/index_multi_assets_v1/request.pb.h"
