@@ -777,5 +777,59 @@ StreamExoticIndicesServiceV1::Service::~Service() {
 }
 
 
+static const char* StreamAggregatedStatePriceServiceV1_method_names[] = {
+  "/kaikosdk.StreamAggregatedStatePriceServiceV1/Subscribe",
+};
+
+std::unique_ptr< StreamAggregatedStatePriceServiceV1::Stub> StreamAggregatedStatePriceServiceV1::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+  (void)options;
+  std::unique_ptr< StreamAggregatedStatePriceServiceV1::Stub> stub(new StreamAggregatedStatePriceServiceV1::Stub(channel, options));
+  return stub;
+}
+
+StreamAggregatedStatePriceServiceV1::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
+  : channel_(channel), rpcmethod_Subscribe_(StreamAggregatedStatePriceServiceV1_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  {}
+
+::grpc::ClientReader< ::kaikosdk::StreamAggregatedStatePriceResponseV1>* StreamAggregatedStatePriceServiceV1::Stub::SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatedStatePriceRequestV1& request) {
+  return ::grpc::internal::ClientReaderFactory< ::kaikosdk::StreamAggregatedStatePriceResponseV1>::Create(channel_.get(), rpcmethod_Subscribe_, context, request);
+}
+
+void StreamAggregatedStatePriceServiceV1::Stub::async::Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatedStatePriceRequestV1* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamAggregatedStatePriceResponseV1>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::kaikosdk::StreamAggregatedStatePriceResponseV1>::Create(stub_->channel_.get(), stub_->rpcmethod_Subscribe_, context, request, reactor);
+}
+
+::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatedStatePriceResponseV1>* StreamAggregatedStatePriceServiceV1::Stub::AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatedStatePriceRequestV1& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::kaikosdk::StreamAggregatedStatePriceResponseV1>::Create(channel_.get(), cq, rpcmethod_Subscribe_, context, request, true, tag);
+}
+
+::grpc::ClientAsyncReader< ::kaikosdk::StreamAggregatedStatePriceResponseV1>* StreamAggregatedStatePriceServiceV1::Stub::PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamAggregatedStatePriceRequestV1& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::kaikosdk::StreamAggregatedStatePriceResponseV1>::Create(channel_.get(), cq, rpcmethod_Subscribe_, context, request, false, nullptr);
+}
+
+StreamAggregatedStatePriceServiceV1::Service::Service() {
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      StreamAggregatedStatePriceServiceV1_method_names[0],
+      ::grpc::internal::RpcMethod::SERVER_STREAMING,
+      new ::grpc::internal::ServerStreamingHandler< StreamAggregatedStatePriceServiceV1::Service, ::kaikosdk::StreamAggregatedStatePriceRequestV1, ::kaikosdk::StreamAggregatedStatePriceResponseV1>(
+          [](StreamAggregatedStatePriceServiceV1::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::kaikosdk::StreamAggregatedStatePriceRequestV1* req,
+             ::grpc::ServerWriter<::kaikosdk::StreamAggregatedStatePriceResponseV1>* writer) {
+               return service->Subscribe(ctx, req, writer);
+             }, this)));
+}
+
+StreamAggregatedStatePriceServiceV1::Service::~Service() {
+}
+
+::grpc::Status StreamAggregatedStatePriceServiceV1::Service::Subscribe(::grpc::ServerContext* context, const ::kaikosdk::StreamAggregatedStatePriceRequestV1* request, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatedStatePriceResponseV1>* writer) {
+  (void) context;
+  (void) request;
+  (void) writer;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+
 }  // namespace kaikosdk
 
