@@ -181,6 +181,7 @@ class StreamAggregatedStatePriceResponseV1 final :
     kBaseFieldNumber = 2,
     kAggregatedPriceUsdFieldNumber = 3,
     kAggregatedPriceLstFieldNumber = 4,
+    kLstQuoteFieldNumber = 6,
     kDatetimeFieldNumber = 1,
     kTsEventFieldNumber = 5,
   };
@@ -224,6 +225,20 @@ class StreamAggregatedStatePriceResponseV1 final :
   const std::string& _internal_aggregated_price_lst() const;
   inline PROTOBUF_ALWAYS_INLINE void _internal_set_aggregated_price_lst(const std::string& value);
   std::string* _internal_mutable_aggregated_price_lst();
+  public:
+
+  // string lst_quote = 6;
+  void clear_lst_quote();
+  const std::string& lst_quote() const;
+  template <typename ArgT0 = const std::string&, typename... ArgT>
+  void set_lst_quote(ArgT0&& arg0, ArgT... args);
+  std::string* mutable_lst_quote();
+  PROTOBUF_NODISCARD std::string* release_lst_quote();
+  void set_allocated_lst_quote(std::string* lst_quote);
+  private:
+  const std::string& _internal_lst_quote() const;
+  inline PROTOBUF_ALWAYS_INLINE void _internal_set_lst_quote(const std::string& value);
+  std::string* _internal_mutable_lst_quote();
   public:
 
   // .google.protobuf.Timestamp datetime = 1;
@@ -273,6 +288,7 @@ class StreamAggregatedStatePriceResponseV1 final :
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr base_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aggregated_price_usd_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr aggregated_price_lst_;
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr lst_quote_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* datetime_;
     ::PROTOBUF_NAMESPACE_ID::Timestamp* ts_event_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -609,6 +625,56 @@ inline void StreamAggregatedStatePriceResponseV1::set_allocated_ts_event(::PROTO
   }
   _impl_.ts_event_ = ts_event;
   // @@protoc_insertion_point(field_set_allocated:kaikosdk.StreamAggregatedStatePriceResponseV1.ts_event)
+}
+
+// string lst_quote = 6;
+inline void StreamAggregatedStatePriceResponseV1::clear_lst_quote() {
+  _impl_.lst_quote_.ClearToEmpty();
+}
+inline const std::string& StreamAggregatedStatePriceResponseV1::lst_quote() const {
+  // @@protoc_insertion_point(field_get:kaikosdk.StreamAggregatedStatePriceResponseV1.lst_quote)
+  return _internal_lst_quote();
+}
+template <typename ArgT0, typename... ArgT>
+inline PROTOBUF_ALWAYS_INLINE
+void StreamAggregatedStatePriceResponseV1::set_lst_quote(ArgT0&& arg0, ArgT... args) {
+ 
+ _impl_.lst_quote_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
+  // @@protoc_insertion_point(field_set:kaikosdk.StreamAggregatedStatePriceResponseV1.lst_quote)
+}
+inline std::string* StreamAggregatedStatePriceResponseV1::mutable_lst_quote() {
+  std::string* _s = _internal_mutable_lst_quote();
+  // @@protoc_insertion_point(field_mutable:kaikosdk.StreamAggregatedStatePriceResponseV1.lst_quote)
+  return _s;
+}
+inline const std::string& StreamAggregatedStatePriceResponseV1::_internal_lst_quote() const {
+  return _impl_.lst_quote_.Get();
+}
+inline void StreamAggregatedStatePriceResponseV1::_internal_set_lst_quote(const std::string& value) {
+  
+  _impl_.lst_quote_.Set(value, GetArenaForAllocation());
+}
+inline std::string* StreamAggregatedStatePriceResponseV1::_internal_mutable_lst_quote() {
+  
+  return _impl_.lst_quote_.Mutable(GetArenaForAllocation());
+}
+inline std::string* StreamAggregatedStatePriceResponseV1::release_lst_quote() {
+  // @@protoc_insertion_point(field_release:kaikosdk.StreamAggregatedStatePriceResponseV1.lst_quote)
+  return _impl_.lst_quote_.Release();
+}
+inline void StreamAggregatedStatePriceResponseV1::set_allocated_lst_quote(std::string* lst_quote) {
+  if (lst_quote != nullptr) {
+    
+  } else {
+    
+  }
+  _impl_.lst_quote_.SetAllocated(lst_quote, GetArenaForAllocation());
+#ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  if (_impl_.lst_quote_.IsDefault()) {
+    _impl_.lst_quote_.Set("", GetArenaForAllocation());
+  }
+#endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
+  // @@protoc_insertion_point(field_set_allocated:kaikosdk.StreamAggregatedStatePriceResponseV1.lst_quote)
 }
 
 #ifdef __GNUC__
