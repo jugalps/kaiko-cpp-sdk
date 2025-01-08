@@ -54,6 +54,8 @@
 #include "sdk/stream/iv_svi_parameters_v1/response.pb.h"
 #include "sdk/stream/market_update_v1/request.pb.h"
 #include "sdk/stream/market_update_v1/response.pb.h"
+#include "sdk/stream/orderbookl2_v1/request.pb.h"
+#include "sdk/stream/orderbookl2_v1/response.pb.h"
 #include "sdk/stream/trades_v1/request.pb.h"
 #include "sdk/stream/trades_v1/response.pb.h"
 #include "sdk/stream/aggregated_state_price_v1/request.pb.h"

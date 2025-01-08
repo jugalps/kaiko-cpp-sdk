@@ -777,6 +777,60 @@ StreamExoticIndicesServiceV1::Service::~Service() {
 }
 
 
+static const char* StreamOrderbookL2ServiceV1_method_names[] = {
+  "/kaikosdk.StreamOrderbookL2ServiceV1/Subscribe",
+};
+
+std::unique_ptr< StreamOrderbookL2ServiceV1::Stub> StreamOrderbookL2ServiceV1::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+  (void)options;
+  std::unique_ptr< StreamOrderbookL2ServiceV1::Stub> stub(new StreamOrderbookL2ServiceV1::Stub(channel, options));
+  return stub;
+}
+
+StreamOrderbookL2ServiceV1::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
+  : channel_(channel), rpcmethod_Subscribe_(StreamOrderbookL2ServiceV1_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  {}
+
+::grpc::ClientReader< ::kaikosdk::StreamOrderBookL2ResponseV1>* StreamOrderbookL2ServiceV1::Stub::SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamOrderBookL2RequestV1& request) {
+  return ::grpc::internal::ClientReaderFactory< ::kaikosdk::StreamOrderBookL2ResponseV1>::Create(channel_.get(), rpcmethod_Subscribe_, context, request);
+}
+
+void StreamOrderbookL2ServiceV1::Stub::async::Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamOrderBookL2RequestV1* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamOrderBookL2ResponseV1>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::kaikosdk::StreamOrderBookL2ResponseV1>::Create(stub_->channel_.get(), stub_->rpcmethod_Subscribe_, context, request, reactor);
+}
+
+::grpc::ClientAsyncReader< ::kaikosdk::StreamOrderBookL2ResponseV1>* StreamOrderbookL2ServiceV1::Stub::AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamOrderBookL2RequestV1& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::kaikosdk::StreamOrderBookL2ResponseV1>::Create(channel_.get(), cq, rpcmethod_Subscribe_, context, request, true, tag);
+}
+
+::grpc::ClientAsyncReader< ::kaikosdk::StreamOrderBookL2ResponseV1>* StreamOrderbookL2ServiceV1::Stub::PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamOrderBookL2RequestV1& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::kaikosdk::StreamOrderBookL2ResponseV1>::Create(channel_.get(), cq, rpcmethod_Subscribe_, context, request, false, nullptr);
+}
+
+StreamOrderbookL2ServiceV1::Service::Service() {
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      StreamOrderbookL2ServiceV1_method_names[0],
+      ::grpc::internal::RpcMethod::SERVER_STREAMING,
+      new ::grpc::internal::ServerStreamingHandler< StreamOrderbookL2ServiceV1::Service, ::kaikosdk::StreamOrderBookL2RequestV1, ::kaikosdk::StreamOrderBookL2ResponseV1>(
+          [](StreamOrderbookL2ServiceV1::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::kaikosdk::StreamOrderBookL2RequestV1* req,
+             ::grpc::ServerWriter<::kaikosdk::StreamOrderBookL2ResponseV1>* writer) {
+               return service->Subscribe(ctx, req, writer);
+             }, this)));
+}
+
+StreamOrderbookL2ServiceV1::Service::~Service() {
+}
+
+::grpc::Status StreamOrderbookL2ServiceV1::Service::Subscribe(::grpc::ServerContext* context, const ::kaikosdk::StreamOrderBookL2RequestV1* request, ::grpc::ServerWriter< ::kaikosdk::StreamOrderBookL2ResponseV1>* writer) {
+  (void) context;
+  (void) request;
+  (void) writer;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+
 static const char* StreamAggregatedStatePriceServiceV1_method_names[] = {
   "/kaikosdk.StreamAggregatedStatePriceServiceV1/Subscribe",
 };
@@ -824,6 +878,60 @@ StreamAggregatedStatePriceServiceV1::Service::~Service() {
 }
 
 ::grpc::Status StreamAggregatedStatePriceServiceV1::Service::Subscribe(::grpc::ServerContext* context, const ::kaikosdk::StreamAggregatedStatePriceRequestV1* request, ::grpc::ServerWriter< ::kaikosdk::StreamAggregatedStatePriceResponseV1>* writer) {
+  (void) context;
+  (void) request;
+  (void) writer;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+
+static const char* StreamOrderbookL2ReplayServiceV1_method_names[] = {
+  "/kaikosdk.StreamOrderbookL2ReplayServiceV1/Subscribe",
+};
+
+std::unique_ptr< StreamOrderbookL2ReplayServiceV1::Stub> StreamOrderbookL2ReplayServiceV1::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
+  (void)options;
+  std::unique_ptr< StreamOrderbookL2ReplayServiceV1::Stub> stub(new StreamOrderbookL2ReplayServiceV1::Stub(channel, options));
+  return stub;
+}
+
+StreamOrderbookL2ReplayServiceV1::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options)
+  : channel_(channel), rpcmethod_Subscribe_(StreamOrderbookL2ReplayServiceV1_method_names[0], options.suffix_for_stats(),::grpc::internal::RpcMethod::SERVER_STREAMING, channel)
+  {}
+
+::grpc::ClientReader< ::kaikosdk::StreamOrderBookL2ResponseV1>* StreamOrderbookL2ReplayServiceV1::Stub::SubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamOrderBookL2ReplayRequestV1& request) {
+  return ::grpc::internal::ClientReaderFactory< ::kaikosdk::StreamOrderBookL2ResponseV1>::Create(channel_.get(), rpcmethod_Subscribe_, context, request);
+}
+
+void StreamOrderbookL2ReplayServiceV1::Stub::async::Subscribe(::grpc::ClientContext* context, const ::kaikosdk::StreamOrderBookL2ReplayRequestV1* request, ::grpc::ClientReadReactor< ::kaikosdk::StreamOrderBookL2ResponseV1>* reactor) {
+  ::grpc::internal::ClientCallbackReaderFactory< ::kaikosdk::StreamOrderBookL2ResponseV1>::Create(stub_->channel_.get(), stub_->rpcmethod_Subscribe_, context, request, reactor);
+}
+
+::grpc::ClientAsyncReader< ::kaikosdk::StreamOrderBookL2ResponseV1>* StreamOrderbookL2ReplayServiceV1::Stub::AsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamOrderBookL2ReplayRequestV1& request, ::grpc::CompletionQueue* cq, void* tag) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::kaikosdk::StreamOrderBookL2ResponseV1>::Create(channel_.get(), cq, rpcmethod_Subscribe_, context, request, true, tag);
+}
+
+::grpc::ClientAsyncReader< ::kaikosdk::StreamOrderBookL2ResponseV1>* StreamOrderbookL2ReplayServiceV1::Stub::PrepareAsyncSubscribeRaw(::grpc::ClientContext* context, const ::kaikosdk::StreamOrderBookL2ReplayRequestV1& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::internal::ClientAsyncReaderFactory< ::kaikosdk::StreamOrderBookL2ResponseV1>::Create(channel_.get(), cq, rpcmethod_Subscribe_, context, request, false, nullptr);
+}
+
+StreamOrderbookL2ReplayServiceV1::Service::Service() {
+  AddMethod(new ::grpc::internal::RpcServiceMethod(
+      StreamOrderbookL2ReplayServiceV1_method_names[0],
+      ::grpc::internal::RpcMethod::SERVER_STREAMING,
+      new ::grpc::internal::ServerStreamingHandler< StreamOrderbookL2ReplayServiceV1::Service, ::kaikosdk::StreamOrderBookL2ReplayRequestV1, ::kaikosdk::StreamOrderBookL2ResponseV1>(
+          [](StreamOrderbookL2ReplayServiceV1::Service* service,
+             ::grpc::ServerContext* ctx,
+             const ::kaikosdk::StreamOrderBookL2ReplayRequestV1* req,
+             ::grpc::ServerWriter<::kaikosdk::StreamOrderBookL2ResponseV1>* writer) {
+               return service->Subscribe(ctx, req, writer);
+             }, this)));
+}
+
+StreamOrderbookL2ReplayServiceV1::Service::~Service() {
+}
+
+::grpc::Status StreamOrderbookL2ReplayServiceV1::Service::Subscribe(::grpc::ServerContext* context, const ::kaikosdk::StreamOrderBookL2ReplayRequestV1* request, ::grpc::ServerWriter< ::kaikosdk::StreamOrderBookL2ResponseV1>* writer) {
   (void) context;
   (void) request;
   (void) writer;
